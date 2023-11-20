@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c61235321cb021107f4412d6180a3503" label="Snippet" max_length="40" name="x_snc_mm_snippet" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="GraphQL" max_length="4000" name="graphql" type="graphql_schema"/>
+        <element attributes="edge_encryption_enabled=true" label="Javascript" max_length="4000" name="javascript" type="script"/>
+        <element attributes="json_view=true" label="JSON" max_length="4000" name="json" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>

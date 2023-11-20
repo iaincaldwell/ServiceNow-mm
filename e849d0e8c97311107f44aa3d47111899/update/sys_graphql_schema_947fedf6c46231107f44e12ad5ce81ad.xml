@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_schema">
+    <sys_graphql_schema action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application_namespace>xSncMm</application_namespace>
+        <enforce_acl/>
+        <name>Case Queries</name>
+        <namespace>caseQueries</namespace>
+        <paths>Case:active,Case:assignedTo,Case:customer,Case:description,Case:id,Case:impact,Case:number,Case:priority,Case:shortDescription,Case:state,Case:urgency,Mutation:updateCase,Query:getCase,Query:getCases,Query:getCasesForCustomer,User:active,User:email,User:id,User:manager,User:name</paths>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <schema>schema {&#13;
+    query: Query&#13;
+    mutation: Mutation&#13;
+}&#13;
+&#13;
+type Query {&#13;
+    getCases(queryStr: String,customerId: String, last:Int): [Case]&#13;
+	getCase(id: ID!): Case!&#13;
+	getCasesForCustomer(customerId: String!, last: Int): [Case]&#13;
+}&#13;
+&#13;
+type Case {&#13;
+	id: String! @source(value: "sys_id.value")&#13;
+	number: String! @source(value: "number.value")&#13;
+	active: Boolean! @source(value: "active.display_value")&#13;
+	state: String! @source(value: "state.display_value")&#13;
+	shortDescription: String @source(value: "short_description.value")&#13;
+	description: String @source(value: "description.value")&#13;
+	priority: String @source(value: "priority.display_value")&#13;
+	impact: String @source(value: "impact.display_value")&#13;
+	urgency: String @source(value: "urgency.display_value")&#13;
+	customer: User @source(value: "customer.value")&#13;
+	assignedTo: User @source(value: "assigned_to.value")&#13;
+}&#13;
+&#13;
+type User {&#13;
+	id: String! @source(value: "sys_id.value")&#13;
+	active: String @source(value: "active.display_value")&#13;
+	name: String @source(value: "name.value")&#13;
+	email: String @source(value: "email.value")&#13;
+	manager: User @source(value : "manager.value")&#13;
+}&#13;
+&#13;
+type Mutation {&#13;
+    updateCase(id: String!, state:Int, comments:String) : Case&#13;
+}&#13;
+</schema>
+        <sys_class_name>sys_graphql_schema</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-20 12:08:05</sys_created_on>
+        <sys_id>947fedf6c46231107f44e12ad5ce81ad</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Case Queries</sys_name>
+        <sys_package display_value="Misty Mountain Adventures" source="x_snc_mm">e849d0e8c97311107f44aa3d47111899</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Misty Mountain Adventures">e849d0e8c97311107f44aa3d47111899</sys_scope>
+        <sys_update_name>sys_graphql_schema_947fedf6c46231107f44e12ad5ce81ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-20 16:58:33</sys_updated_on>
+        <type_names/>
+    </sys_graphql_schema>
+</record_update>

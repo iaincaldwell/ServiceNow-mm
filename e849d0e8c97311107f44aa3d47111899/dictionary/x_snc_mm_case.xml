@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="3c6f6524c9f711107f44aa3d4711183e" extends="task" label="Case" max_length="40" name="x_snc_mm_case" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Customer" mandatory="true" max_length="32" name="customer" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+    </element>
+</database>

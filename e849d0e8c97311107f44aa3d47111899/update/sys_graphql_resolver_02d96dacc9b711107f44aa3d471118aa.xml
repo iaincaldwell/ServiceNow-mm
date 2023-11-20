@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>Get Hello World</name>
+        <schema display_value="Hello World">bea969acc9b711107f44aa3d471118aa</schema>
+        <script><![CDATA[(function process( /*ResolverEnvironment*/ env) {
+  var message = "Hello World";
+    var name = env.getArguments().name;
+
+    if(name){
+      message += ' (and ' + name + ')';
+    }
+    
+    return {
+      "message": message
+    };
+})(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-12 22:49:31</sys_created_on>
+        <sys_id>02d96dacc9b711107f44aa3d471118aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Hello World</sys_name>
+        <sys_package display_value="Misty Mountain Adventures" source="x_snc_mm">e849d0e8c97311107f44aa3d47111899</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Misty Mountain Adventures">e849d0e8c97311107f44aa3d47111899</sys_scope>
+        <sys_update_name>sys_graphql_resolver_02d96dacc9b711107f44aa3d471118aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-12 22:49:31</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>

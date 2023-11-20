@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_snc_mm.support" name="x_snc_mm.support">f4733d28c9f711107f44aa3d471118c1</contains>
+        <role display_value="x_snc_mm.admin" name="x_snc_mm.admin">f183f128c9f711107f44aa3d47111851</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-12 23:31:51</sys_created_on>
+        <sys_id>64a3fd28c9f711107f44aa3d471118b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_mm.support.x_snc_mm.admin</sys_name>
+        <sys_package display_value="Misty Mountain Adventures" source="x_snc_mm">e849d0e8c97311107f44aa3d47111899</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Misty Mountain Adventures">e849d0e8c97311107f44aa3d47111899</sys_scope>
+        <sys_update_name>sys_user_role_contains_64a3fd28c9f711107f44aa3d471118b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-12 23:31:51</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

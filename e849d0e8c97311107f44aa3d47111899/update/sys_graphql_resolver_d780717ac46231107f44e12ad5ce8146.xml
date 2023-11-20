@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_graphql_resolver">
+    <sys_graphql_resolver action="INSERT_OR_UPDATE">
+        <name>Get Cases</name>
+        <schema display_value="Case Queries">947fedf6c46231107f44e12ad5ce81ad</schema>
+        <script><![CDATA[   (function process(/*ResolverEnvironment*/ env) {
+     var gr = new GlideRecordSecure('x_snc_mm_case');
+
+     // If these parameters were passed add them to the GR
+     if (env.getArguments().customerId) {
+       gr.addQuery('customer', env.getArguments().customerId);
+     }
+  
+     if (env.getArguments().queryStr){
+       gr.addEncodedQuery(env.getArguments().queryStr);
+     }
+  
+     // If the sys id is specified for getIncident
+     if (env.getArguments().id) {
+       gr.addQuery('sys_id', env.getArguments().id);
+     }
+  
+     // default to last 5 if not specified
+     var last = env.getArguments().last || 5;
+
+     // Handle optional "priority" argument
+     if (env.getArguments().priority) {
+       gr.addQuery('priority', env.getArguments().priority);
+     }
+     gr.orderByDesc('sys_created_on');
+     gr.setLimit(last);
+     gr.query();
+
+     return gr;
+
+    })(env);]]></script>
+        <sys_class_name>sys_graphql_resolver</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-11-20 12:09:14</sys_created_on>
+        <sys_id>d780717ac46231107f44e12ad5ce8146</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Cases</sys_name>
+        <sys_package display_value="Misty Mountain Adventures" source="x_snc_mm">e849d0e8c97311107f44aa3d47111899</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Misty Mountain Adventures">e849d0e8c97311107f44aa3d47111899</sys_scope>
+        <sys_update_name>sys_graphql_resolver_d780717ac46231107f44e12ad5ce8146</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-20 12:09:14</sys_updated_on>
+    </sys_graphql_resolver>
+</record_update>
